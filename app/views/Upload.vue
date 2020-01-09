@@ -1,21 +1,10 @@
 <template>
-    <div>hhjfc
-        <table style="width:100%">
-            <router-link to="/hello/">FirstRoute</router-link>
-            <tr v-for="song in songs">
-                {{song}}
-                <router-link :to="{ name: 'Stream', params: { songHash: song.songLength }}">STREAM </router-link>
-<!--                <router-link to="/stream/{{song.id}}">Stream</router-link>-->
-            </tr>
-
-        </table>
-    </div>
-
+    
 </template>
 
 <script>
     export default {
-        name: "List",
+        name: "Upload",
         data() {
             return {
                 songs: null
@@ -37,7 +26,6 @@
             }
         }
     }
-
 </script>
 
 <style scoped>

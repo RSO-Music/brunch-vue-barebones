@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>{{ msg }}</h1>
-        Hello {{ $route.params.name }}
+        Hello {{ $route.params.songHash }}
     </div>
 </template>
 

@@ -20,9 +20,14 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/song/:songId',
+      path: '/song/:songHash',
       name: 'Stream',
       component: Stream
+    },
+    {
+      path: '/upload/',
+      name: 'Upload',
+      component: Upload
     },
     {
       path: '*',
