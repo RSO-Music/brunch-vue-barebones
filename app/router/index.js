@@ -3,8 +3,9 @@ import Router from 'vue-router'
 import Hello from '../components/Hello'
 import List from '../views/List'
 import NotFoundComponent from '../views/NotFoundComponent'
+import Stream from "../views/Stream";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -14,9 +15,14 @@ export default new Router({
       component: List
     },
     {
-      path: '/list',
-      name: 'Hello',
+      path: '/hello/',
+      name: 'hello',
       component: Hello
+    },
+    {
+      path: '/song/:songId',
+      name: 'Stream',
+      component: Stream
     },
     {
       path: '*',

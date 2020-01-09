@@ -1,8 +1,14 @@
 <template>
     <div>hhjfc
-        <li v-for="song in songs">
-            {{song}}
-        </li>
+        <table style="width:100%">
+            <router-link to="/hello/">FirstRoute</router-link>
+            <tr v-for="song in songs">
+                {{song}}
+                <router-link :to="{ name: 'Stream', params: { songId: song.songId }}">STREAM </router-link>
+<!--                <router-link to="/stream/{{song.id}}">Stream</router-link>-->
+            </tr>
+
+        </table>
     </div>
 
 </template>
@@ -19,7 +25,7 @@
             this.load();
         },
         methods: {
-            load(){
+            load() {
                 console.log("inside log");
                 fetch("http://34.89.111.13/v1/songs")
                     .then(Response => Response.json())
